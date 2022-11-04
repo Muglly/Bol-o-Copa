@@ -17,7 +17,7 @@ export function Find() {
 
                 <Input mb={2} placeholder="Qual o código do bolão?" />
 
-                <Button title="buscar bolão"/>
+                <Button title="buscar bolão" />
 
             </VStack>
         </VStack>
