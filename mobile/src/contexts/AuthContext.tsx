@@ -55,8 +55,7 @@ export function AuthContextProvider({ children }: AuthProviderProps) {
 
             const userInfoResponse = await api.get("/me");
             setUser(userInfoResponse.data.user)
-
-        } catch (error){
+        } catch (error) {
             console.log(error);
             throw error;
         } finally {
