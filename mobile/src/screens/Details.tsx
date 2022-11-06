@@ -5,12 +5,13 @@ import { useRoute } from "@react-navigation/native";
 
 import { api } from "../services/api";
 
-import { Header } from "../components/Header";
-import { Loading } from "../components/Loading";
 import { Option } from "../components/Option";
-import { EmptyMyPoolList } from "../components/EmptyMyPoolList";
-import { PoolCardProps } from "../components/PoolCard";
+import { Header } from "../components/Header";
+import { Guesses } from "../components/Guesses";
+import { Loading } from "../components/Loading";
 import { PoolHeader } from "../components/PoolHeader";
+import { PoolCardProps } from "../components/PoolCard";
+import { EmptyMyPoolList } from "../components/EmptyMyPoolList";
 
 interface RouteParams {
     id: string;
@@ -90,6 +91,7 @@ export function Details() {
                         />
                     </HStack>
 
+                    <Guesses poolId={poolDetails.id}/>
                 </VStack>
 
                 : <EmptyMyPoolList code={poolDetails.code} />
