@@ -145,7 +145,7 @@ export async function poolRoutes(fastify: FastifyInstance) {
         return { pools }
     })
 
-    fastify.post("/pools/:id", {
+    fastify.get("/pools/:id", {
         onRequest: [authenticate]
     }, async (request) => {
         const getpoolParams = z.object({
